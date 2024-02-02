@@ -29,7 +29,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookmarks.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # local
+    # 3rd party
+    'social_django',
+    'django_extensions',
 
 ]
 
@@ -145,7 +148,14 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
+
+# social authentication using social-django-auth
+SOCIAL_AUTH_FACEBOOK_KEY = env.str(
+    "SOCIAL_AUTH_FACEBOOK_KEY")  # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = env.str(
+    "SOCIAL_AUTH_FACEBOOK_SECRET")  # Facebook App Secret
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

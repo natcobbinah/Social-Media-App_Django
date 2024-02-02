@@ -11,3 +11,4 @@ A demo of a Social Media website using Django, Django 4 by example - Antonio Mel
 * Building a custom authentication backend
 * Preventing users from using an existing email
 * Social authentication using Facebook, Google, and Twitter ...in progress
+* Creating a profile for users that register with social authentication
