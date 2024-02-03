@@ -149,6 +149,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
 ]
 
 # social authentication using social-django-auth
@@ -156,6 +157,9 @@ SOCIAL_AUTH_FACEBOOK_KEY = env.str(
     "SOCIAL_AUTH_FACEBOOK_KEY")  # Facebook App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = env.str(
     "SOCIAL_AUTH_FACEBOOK_SECRET")  # Facebook App Secret
+
+SOCIAL_AUTH_TWITTER_KEY = env.str("SOCIAL_AUTH_TWITTER_KEY")
+SOCIAL_AUTH_TWITTER_SECRET = env.str("SOCIAL_AUTH_TWITTER_SECRET")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
