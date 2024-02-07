@@ -28,6 +28,10 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if DEBUG:
+    import mimetypes
+    mimetypes.add_type('application/javascript', '.js', True)
+    mimetypes.add_type('text/css', True)
 
 ALLOWED_HOSTS = ['bookmarks.com', 'localhost', '127.0.0.1']
 
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # local
+    "bookmark_images.apps.BookmarkImagesConfig",
     # 3rd party
     'social_django',
     'django_extensions',
@@ -161,6 +166,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_user',
     'social_core.pipeline.user.get_username',
     'social_core.pipeline.user.create_user',
+    # at this instance a User instance is available
     'account.authentication.create_profile',
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
