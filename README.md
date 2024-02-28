@@ -33,5 +33,15 @@ A demo of a Social Media website using Django, Django 4 by example - Antonio Mel
 ## Without https
 > python manage.py runserver
 
+## Sample application screenshots
+DASHBOARD PAGE
+![dasbhoard](https://github.com/natcobbinah/Social-Media-App_Django/assets/10479361/640bf41a-2955-4d71-a5ab-569e0cab64c2)
+
+PEOPLE SECTION
+![people](https://github.com/natcobbinah/Social-Media-App_Django/assets/10479361/cb6ce013-91e2-42c1-898c-2255a77b7fa1)
+
+IMAGE DETAIL SECTION
+![imagedetail1](https://github.com/natcobbinah/Social-Media-App_Django/assets/10479361/9f505756-5a69-4af5-b949-89f5cf2a2ac3)
+
 
 
