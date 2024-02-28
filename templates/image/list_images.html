@@ -3,12 +3,12 @@
 <div class="image">
     <a href="{{image.get_absolute_url}}">
         {% thumbnail image.image 300x300 crop="smart" as im %}
-        <a hre="{{image.get_absolute_url}}">
+        <a href="{{image.get_absolute_url}}">
             <img src="{{im.url}}" />
         </a>
     </a>
     <div class="info">
-        <a hreff="{{image.get_absolute_url}}" class="title">
+        <a href="{{image.get_absolute_url}}" class="title">
             {{image.title}}
         </a>
     </div>

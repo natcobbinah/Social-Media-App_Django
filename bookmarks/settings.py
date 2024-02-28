@@ -50,13 +50,16 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # local
     "bookmark_images.apps.BookmarkImagesConfig",
+    "actions.apps.ActionsConfig",
     # 3rd party
     'social_django',
     'django_extensions',
     'easy_thumbnails',
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -82,6 +85,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]
 
 WSGI_APPLICATION = "bookmarks.wsgi.application"
@@ -194,5 +201,10 @@ ABSOLUTE_URL_OVERRIDES = {
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+# REDIS CONFIGURATION
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

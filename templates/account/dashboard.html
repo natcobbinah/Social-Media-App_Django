@@ -7,6 +7,9 @@
     {{ total_images_created|pluralize }}.
 </p>
 {% endwith %}
+<p>View image rankings:
+    <a href="{% url 'images:ranking' %}">Image Rankings</a>
+</p>
 <p>Drag the following button to your bookmarks toolbar to bookmark images from other websites
     -> <a href="javascript:{% include 'account/bookmarklet_launcher.js' %}" class="button">Bookmark it</a>
 </p>
@@ -14,4 +17,10 @@
     <a href="{% url 'edit' %}">Edit your profile</a> or
     <a href="{% url 'password_change' %}">Change your password</a>
 </p>
+<h2>What's happening</h2>
+<div id="action-list">
+    {% for action in actions %}
+    {% include 'action/detail.html' %}
+    {% endfor %}
+</div>
 {% endblock %}

@@ -18,14 +18,20 @@ A demo of a Social Media website using Django, Django 4 by example - Antonio Mel
 * Infinite scroll pagination to image list
 * Building a follow system
 * Creating many-to-many relationships with an intermediary model
-* Creating an activity stream application...in progress
-* Adding generic relations to models...in progress
-* Optimizing QuerySets for related objects...in progress
-* Using signals for denormalizing counts...in progress
-* Using Django Debug Toolbar to obtain relevant debug information...in progress
-* Counting image views with Redis...in progress
-* Creating a ranking of the most viewed images with Redis...in progress
+* Creating an activity stream application
+* Adding generic relations to models
+* Optimizing QuerySets for related objects
+* Using signals for denormalizing counts
+* Using Django Debug Toolbar to obtain relevant debug information.
+* Counting image views with Redis
+* Creating a ranking of the most viewed images with Redis
 
 
-## Running Development server
+## Running Development server using https
 > python manage.py runserver_plus --cert-file cert.crt
+
+## Without https
+> python manage.py runserver
+
+
+
